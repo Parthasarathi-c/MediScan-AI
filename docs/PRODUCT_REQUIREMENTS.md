@@ -118,20 +118,28 @@ The following enhancements are planned for consideration after the MVP has been 
 
 ## 8. Technology Stack
 
-| Layer | Technology |
-|---|---|
-| **Platform** | Android (Native) |
-| **Language** | Kotlin |
-| **UI Framework** | Jetpack Compose |
-| **Architecture** | MVVM (Model-View-ViewModel) |
-| **OCR Engine** | ML Kit Text Recognition (on-device) |
-| **AI/Language Simplification** | LLM API (Gemini / Claude / OpenAI) |
-| **Medicine Data Source** | Trusted third-party medicine information API |
-| **Local Storage** | Room Database (SQLite) |
-| **Reminders/Notifications** | Android WorkManager + Notification API |
-| **Image Handling** | CameraX |
-| **Dependency Injection** | Hilt |
-| **Version Control** | Git / GitHub |
+
+| Layer / Component             | Selected Technology                              |
+| ----------------------------- | ------------------------------------------------ |
+| **Platform**                  | Android (Native)                                 |
+| **Programming Language**      | Kotlin                                           |
+| **UI Framework**              | Jetpack Compose                                  |
+| **Architecture Pattern**      | MVVM + Clean Architecture                        |
+| **Dependency Injection**      | Hilt                                             |
+| **Navigation**                | Navigation Compose                               |
+| **Camera**                    | CameraX                                          |
+| **OCR Engine**                | Google ML Kit Text Recognition                   |
+| **Networking**                | Retrofit + OkHttp                                |
+| **Medicine Data Source**      | Trusted Third-Party Medicine Information API     |
+| **AI**                        | Gemini API *(primary)*                           |
+| **Local Database**            | Room Database (SQLite)                           |
+| **Local Preferences**         | DataStore                                        |
+| **Image Loading**             | Coil                                             |
+| **Asynchronous Programming**  | Kotlin Coroutines                                |
+| **Authentication**            | Firebase Authentication *(Version 2 - Optional)* |
+| **Notifications / Reminders** | WorkManager + Notification API                   |
+| **Version Control**           | Git + GitHub                                     |
+
 
 ---
 
