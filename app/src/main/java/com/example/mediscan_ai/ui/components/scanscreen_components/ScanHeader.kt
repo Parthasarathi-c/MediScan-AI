@@ -31,9 +31,7 @@ fun ScanHeader(
         verticalAlignment = Alignment.CenterVertically
     ) {
         IconButton(
-            onClick = {
-                onBackClick
-            }
+            onClick = onBackClick
         ) {
             Icon(
                 imageVector = Icons.Default.ArrowBack,
