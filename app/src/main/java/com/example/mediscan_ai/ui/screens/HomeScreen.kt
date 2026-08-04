@@ -7,6 +7,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.material3.*
 import com.example.mediscan_ai.ui.components.MedicineSearchBar
 import com.example.mediscan_ai.ui.components.MedicineScanCard
+import com.example.mediscan_ai.ui.components.AppHeader
+import com.example.mediscan_ai.ui.components.BottomNavigationBar
 
 @Composable
 fun HomeScreen() {
@@ -21,6 +23,8 @@ fun HomeScreen() {
             .padding(top = 40.dp)
     ) {
 
+        AppHeader()
+
         MedicineSearchBar(
             value = searchText,
             onValueChange = {
@@ -33,6 +37,12 @@ fun HomeScreen() {
         )
 
         MedicineScanCard()
+
+        Spacer(
+            modifier = Modifier.height(400.dp)
+        )
+
+        BottomNavigationBar()
 
     }
 }
