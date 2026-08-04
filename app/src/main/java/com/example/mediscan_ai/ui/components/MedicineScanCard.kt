@@ -55,7 +55,7 @@ fun MedicineScanCard() {
                     Text(
                         text = "Scan Medicine",
                         color = Color.White,
-                        fontSize = 22.sp,
+                        fontSize = 20.sp,
                         fontWeight = FontWeight.Bold
                     )
 
@@ -64,7 +64,7 @@ fun MedicineScanCard() {
                     Text(
                         text = "Identify medicines and get\nAI-powered safety insights instantly.",
                         color = Color.White.copy(alpha = 0.9f),
-                        fontSize = 14.sp,
+                        fontSize = 13.sp,
                         lineHeight = 20.sp
                     )
 

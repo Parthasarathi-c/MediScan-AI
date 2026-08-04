@@ -11,7 +11,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.text.SpanStyle
+import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -20,14 +23,34 @@ fun AppHeader(){
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 20.dp, vertical = 16.dp),
+            .statusBarsPadding()
+            .padding(horizontal = 20.dp, vertical = 17.dp),
         verticalAlignment = Alignment.CenterVertically
     ){
         Text(
-            text = "MedScan AI",
-            fontSize = 32.sp,
-            fontWeight = FontWeight.Bold,
-            color = Color(0xFF2563EB)
+            text = buildAnnotatedString {
+
+                withStyle(
+                    style = SpanStyle(
+                        color = Color.Black,
+                        fontSize = 28.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                ) {
+                    append("MediScan ")
+                }
+
+                withStyle(
+                    style = SpanStyle(
+                        color = Color(0xFF2563EB),
+                        fontSize = 28.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                ) {
+                    append("AI")
+                }
+            }
+
         )
 
         Spacer(modifier = Modifier.weight(1f))
