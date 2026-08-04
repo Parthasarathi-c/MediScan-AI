@@ -1,5 +1,6 @@
 package com.example.mediscan_ai.ui.components
 
+import androidx.compose.foundation.clickable
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.CameraAlt
@@ -23,7 +24,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun BottomNavigationBar(){
+fun BottomNavigationBar(
+    onScanClick: () -> Unit
+){
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -51,6 +54,9 @@ fun BottomNavigationBar(){
             )
         }
         Column(
+            modifier = Modifier.clickable {
+                onScanClick()
+            },
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 

@@ -22,7 +22,9 @@ import com.example.mediscan_ai.ui.components.HealthTipCard
 import com.example.mediscan_ai.ui.data.HealthTips
 
 @Composable
-fun HomeScreen() {
+fun HomeScreen(
+    onScanClick: () -> Unit
+) {
 
     var searchText by remember {
         mutableStateOf("")
@@ -47,7 +49,7 @@ fun HomeScreen() {
                 shadowElevation = 8.dp,
                 color = MaterialTheme.colorScheme.background
             ) {
-                BottomNavigationBar()
+                BottomNavigationBar(onScanClick = onScanClick)
             }
         },
 
@@ -78,7 +80,7 @@ fun HomeScreen() {
                     modifier = Modifier.height(24.dp)
                 )
 
-                MedicineScanCard()
+                MedicineScanCard(onClick = onScanClick)
 
                 Spacer(modifier = Modifier.height(24.dp))
 

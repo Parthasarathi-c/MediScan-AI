@@ -20,7 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.mediscan_ai.ui.theme.MediScanAITheme
 import com.example.mediscan_ai.ui.screens.HomeScreen
 import kotlinx.coroutines.delay
-
+import com.example.mediscan_ai.ui.navigation.NavGraph
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +39,7 @@ class MainActivity : ComponentActivity() {
                 if (showSplash) {
                     SplashScreen()
                 } else {
-                    HomeScreen()
+                    NavGraph()
                 }
             }
         }
